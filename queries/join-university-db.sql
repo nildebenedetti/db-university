@@ -128,7 +128,7 @@ from students s
 	join courses c
 		on e.course_id = c.id
 group by s.id, c.id
-having es.grade >= 18
+having MIN(es.vote) >= 18
 order by s.surname, s.name asc;
 
 
